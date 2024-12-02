@@ -160,6 +160,21 @@ strong {
     line-height: 1.6;
 }
 
+/* Side Dishes Section */
+aside {
+    width: 100vw; /* Full viewport width */
+    margin-left: -10px; /* Negate body padding on the left */
+    margin-right: -10px; /* Negate body padding on the right */
+    padding: 10px;
+    background-color: var(--color-teal);
+}
+#sides {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
 /* Navigation */
 nav {
     font-family: var(--font-mont);
