@@ -94,10 +94,17 @@ li {
 }
 
 body {
-    padding: 10px;
-  }
+    padding: 0px 10px;
+    margin: 0px 40px;
+    background-color: var(--color-teal-transparent);
+}
 
-/* Menu */
+main, header {
+    background-color: var(--color-light);
+    padding: 10px;
+}
+
+/* HEADER: Menu */
 menu {
     display: flex;
     justify-content: space-around;
@@ -114,9 +121,9 @@ menu li {
     color: var(--color-accent);
 }
 
-/* Taco Text */
+/* HEADER: Taco Text */
 #taco-text img {
-    width: 100vw; /* Make the image span the entire viewport width */
+    width: 107%; /* Make the image span the entire viewport width */
     margin-left: -10px; /* Negate the body padding on the left */
     margin-right: -10px; /* Negate body padding on the right */
 }
@@ -125,16 +132,16 @@ menu li {
     margin-bottom: 16px;
 }
 
-/* Details Section */
+/* MAIN: Details Section */
 #details {
-    margin: 20px 0px;
+    margin-bottom: 20px;
 }
 
 strong {
     margin-right: 10px;
 }
 
-/* Ingredients Section */
+/* MAIN: Ingredients Section */
 #ingredients {
     margin-bottom: 20px;
 }
@@ -148,7 +155,7 @@ strong {
     margin-bottom: 20px;
 }
 
-/* Directions Section */
+/* MAIN: Directions Section */
 #directions ol {
     list-style-type: decimal;
     padding-left: 20px;
@@ -162,17 +169,30 @@ strong {
 
 /* Side Dishes Section */
 aside {
-    width: 100vw; /* Full viewport width */
-    margin-left: -10px; /* Negate body padding on the left */
-    margin-right: -10px; /* Negate body padding on the right */
     padding: 10px;
     background-color: var(--color-teal);
 }
-#sides {
+
+#aside-h2 {
+    margin-bottom: 40px;
+}
+
+.sides > img {
+    grid-column: 1;
+    grid-row: 1 / 3;          /* Span the image over 3 rows */
+    width: 100%;
+}
+
+.sides {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns:  100px 1fr;
+    grid-template-rows: 40px auto;
+    column-gap: 20px;
+    margin-bottom: 40px;
+}
+
+#sides-tort {
+    margin-bottom: 0; 
 }
 
 /* Navigation */
@@ -201,11 +221,44 @@ input {
 footer {
     font-family: var(--font-bebas);
     font-size: 20px;
+    margin-top: 80px;
+    background-color: var(--color-light);
 }
 
 #social li {
     font-family: var(--font-bebas);
     font-size: 20px;
+    color: var(--color-accent);
+}
+
+#social {
+    display: flex;
+    justify-content: space-around;
+}
+
+#social li {
+    display: flex;
+    flex-direction: column-reverse;  /* Stack text and SVG vertically */
+    align-items: center;     /* Center-align both text and SVG */
+    list-style: none;
+}
+
+#ft-last {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 40px;
+}
+
+#ft-last img {
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.footer-p {
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /*-------------------- MEDIA QUERY (768 px medium) --------------------------------*/
